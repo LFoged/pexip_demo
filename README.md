@@ -1,6 +1,6 @@
 # Pexip demo app
 
-### [See it live](#)
+### [See it live](https://lfoged.github.io/pexip_demo/)
 
 ### Description
 
