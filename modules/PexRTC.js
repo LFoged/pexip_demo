@@ -1,5 +1,9 @@
 import {
-    getInitUserInputs, createAlert, setAttribute, setVideoSrc, displayChatMsg,
+    getInitUserInputs,
+    createAlert,
+    setAttribute,
+    setVideoSrc,
+    displayChatMsg,
 } from './DOMInterface.js';
 
 const confNode = 'pexipdemo.com';
