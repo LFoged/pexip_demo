@@ -68,7 +68,7 @@ export const setVideoSrc = (videoURL) => {
     DOM.footer.hidden = false;
 };
 
-export const postChatMsg = (msg = '', sender = '') => {
+export const displayChatMsg = (msg = '', sender = '') => {
     const time = new Date().toLocaleTimeString();
     const chatMsg = createElement({ classes: ['chat_msg'], text: `[${time} - @${sender}]:\n${msg}` });
     appendElement(chatMsg, DOM.chatDisplay);

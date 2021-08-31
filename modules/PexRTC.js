@@ -1,5 +1,5 @@
 import {
-    getInitUserInputs, createAlert, setAttribute, setVideoSrc, postChatMsg,
+    getInitUserInputs, createAlert, setAttribute, setVideoSrc, displayChatMsg,
 } from './DOMInterface.js';
 
 const confNode = 'pexipdemo.com';
@@ -25,7 +25,7 @@ const disconnectHandler = (msg = '', type = 'notification') => {
 
 pexRTC.onConnect = setVideoSrc;
 pexRTC.onDisconnect = disconnectHandler;
-pexRTC.onChatMessage = ({ payload, origin }) => postChatMsg(payload, origin || 'Guest');
+pexRTC.onChatMessage = ({ payload, origin }) => displayChatMsg(payload, origin);
 pexRTC.onError = (errorMsg) => disconnectHandler(errorMsg, 'error');
 
 export { sessionTerminationEventHandler };

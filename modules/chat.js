@@ -1,14 +1,14 @@
 import { sendChatMsg } from './PexRTC.js';
 import {
     createAlert,
-    postChatMsg,
+    displayChatMsg,
     getAttribute,
     setAttribute,
 } from './DOMInterface.js';
 
 const sendMessage = (chatMsg = '', sender = '') => {
     sendChatMsg(chatMsg);
-    postChatMsg(chatMsg, sender);
+    displayChatMsg(chatMsg, sender);
     setAttribute({ element: 'chatInput', attr: 'value', value: '' });
 };
 
