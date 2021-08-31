@@ -152,14 +152,11 @@ button {
   padding: 0.75rem 1rem;
 }
 
-#chat_input {
+#chat_input,
+#chat_submit-btn {
   font-size: 1.8rem;
 }
 
 .chat_msg {
   font-size: 1.5rem;
-}
-
-#chat_submit-btn {
-  font-size: 1.8rem;
 }
