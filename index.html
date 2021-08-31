@@ -15,21 +15,17 @@
 
 	<body>
 		<header class="alert_display"></header>
-
 		<section class="modal">
 			<form class="modal_form">
 				<label for="conf-name">Conference name <span class="required">(required)</span>
 					<input type="text" name="conf-name" id="conf_name" placeholder="meet.louis.foged" required>
 				</label>
-
 				<label for="username">Your display name <span class="required">(required)</span>
 					<input type="text" name="username" id="username" placeholder="Guest" required>
 				</label>
-
 				<label for="conf-pin">Conference PIN
 					<input type="text" name="conf-pin" id="conf_pin">
 				</label>
-
 				<label for="bandwidth">Video bandwidth:
 					<select name="bandwidth"  id="bandwidth" required>
 						<option value="1920">Maximum Bandwidth (1920kbps)</option>
@@ -38,15 +34,12 @@
 						<option value="192">Low Bandwidth (192kbps)</option>
 					</select>
 				</label>
-
 				<button type="submit">Join conference</button>
 			</form>
 		</section>
-
-		<main >
+		<main>
 			<video class="video_display" src="" autoplay></video>
 		</main>
-
 		<footer hidden>
 			<section class="section_chat">
 				<article class="chat_display"></article>
@@ -56,6 +49,5 @@
 				</form>
 			</section>
 		</footer>
-
 	</body>
 </html>

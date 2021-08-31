@@ -30,6 +30,7 @@ const DOM = {
 };
 
 export const modalForm = doc.querySelector('.modal_form');
+
 export const chatForm = doc.querySelector('.chat_form');
 
 export const getInitUserInputs = () => {
@@ -45,6 +46,7 @@ export const getInitUserInputs = () => {
 };
 
 export const createAlert = (msg = '', type = 'notify') => {
+    // check no 'alert' exists already
     if (!DOM.header.hasChildNodes()) {
         const alert = createElement({ classes: ['alert_msg', type], text: msg });
         appendElement(alert, DOM.header);

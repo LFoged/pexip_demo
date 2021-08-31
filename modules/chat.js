@@ -6,7 +6,7 @@ import {
     setAttribute,
 } from './DOMInterface.js';
 
-const sendMessage = (chatMsg = '', sender = '') => {
+const sendMsg = (chatMsg = '', sender = '') => {
     sendChatMsg(chatMsg);
     displayChatMsg(chatMsg, sender);
     setAttribute({ element: 'chatInput', attr: 'value', value: '' });
@@ -14,11 +14,10 @@ const sendMessage = (chatMsg = '', sender = '') => {
 
 export const chatMsgEventHandler = (event) => {
     event.preventDefault();
-
     const chatMsg = getAttribute({ element: 'chatInput', attr: 'value' }).trim();
     if (!chatMsg.length) {
         return createAlert('Cannot send an empty chat message', 'error');
     }
 
-    return sendMessage(chatMsg, 'You');
+    return sendMsg(chatMsg, 'You');
 };
