@@ -50,7 +50,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100vw;
-  padding: 3rem 25%;
+  padding: 2rem 25%;
 }
 
 p,
@@ -90,6 +90,7 @@ button {
   outline: none;
 }
 
+/* CLASSES & IDs */
 .modal {
   position: absolute;
   display: flex;
@@ -138,10 +139,9 @@ button {
 
 .chat_display {
   color: var(--white-1);
-  font-size: 1.5;
   font-weight: 100;
   background-color: var(--grey-2);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
   max-height: 10rem;
   overflow-y: scroll;
   border-radius: 0.5rem;
@@ -150,4 +150,16 @@ button {
 .chat_display,
 #chat_input {
   padding: 0.75rem 1rem;
+}
+
+#chat_input {
+  font-size: 1.8rem;
+}
+
+.chat_msg {
+  font-size: 1.5rem;
+}
+
+#chat_submit-btn {
+  font-size: 1.8rem;
 }
