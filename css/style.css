@@ -1,0 +1,147 @@
+/* RESET  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* set 1rem = 10px (10rem / 16px = .625%) */
+}
+
+/* VARIABLES */
+:root {
+  --grey-1: rgb(53, 53, 53);
+  --grey-2: rgb(70, 70, 70);
+  --grey-3: rgb(0, 0, 0, 0.5);
+  --green-1: rgb(20, 158, 38);
+  --white-1: rgb(255, 255, 255);
+  --orange-1: rgb(214, 152, 18);
+  --red-1: rgb(218, 75, 75);
+}
+
+/* TAGS */
+body {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.05rem;
+  color: var(--grey-1);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 5rem;
+  border: none;
+  z-index: 5;
+}
+
+p,
+label,
+select,
+input {
+  font-size: 2.25rem;
+}
+
+label {
+  padding-bottom: 3rem;
+}
+
+label,
+input,
+select {
+  display: block;
+  width: 100%;
+}
+
+input {
+  font-size: 1.9rem;
+  color: var(--grey-2);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.3rem;
+  border: 0.1rem solid var(--grey-1);
+}
+
+button {
+  font-size: 2.2rem;
+  color: var(--white-1);
+  background-color: var(--green-1);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey-3);
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+  border: 0.1rem solid var(--grey-1);
+}
+
+.modal_form {
+  display: flex;
+  flex-direction: column;
+  max-height: 75vh;
+  max-width: 75vw;
+  background-color: var(--white-1);
+  padding: 7rem 10rem;
+  border-radius: 0.75rem;
+}
+
+.required {
+  font-size: 1.2rem;
+  color: var(--red-1);
+}
+
+.alert_msg {
+  color: var(--white-1);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.alert_msg.error {
+  background-color: var(--red-1);
+}
+
+.alert_msg.notify {
+  background-color: var(--orange-1);
+}
+
+.chat_msg {
+  color: red;
+}
+
+.section_chat {
+  position: fixed;
+}
+
+main {
+  border: 1rem solid yellow;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 13rem;
+  width: 100vw;
+  border: 1rem dotted green;
+}

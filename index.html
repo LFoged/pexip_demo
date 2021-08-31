@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<script defer src="https://pexipdemo.com/static/webrtc/js/pexrtc.js"></script>
+		<script defer type="module" src="./modules/DOMInterface.js"></script>
+		<script defer type="module" src="./modules/PexRTC.js"></script>
+		<script defer type="module" src="./modules/chat.js"></script>
+		<script defer type="module" src="./main.js"></script>
+		<title>pexipapp</title>
+	</head>
+
+	<body>
+		<header class="alert_display"></header>
+
+		<section class="modal">
+			<form class="modal_form">
+				<label for="conf-name">Conference name <span class="required">(required)</span>
+					<input type="text" name="conf-name" id="conf_name" placeholder="meet.louis.foged" required>
+				</label>
+
+				<label for="username">Your display name <span class="required">(required)</span>
+					<input type="text" name="username" id="username" placeholder="Guest" required>
+				</label>
+
+				<label for="conf-pin">Conference PIN
+					<input type="text" name="conf-pin" id="conf_pin">
+				</label>
+
+				<label for="bandwidth">Video bandwidth:
+					<select name="bandwidth"  id="bandwidth" required>
+						<option value="1920">Maximum Bandwidth (1920kbps)</option>
+						<option value="1280" selected>High Bandwidth (1280kbps)</option>
+						<option value="576">Medium Bandwidth (576kbps)</option>
+						<option value="192">Low Bandwidth (192kbps)</option>
+					</select>
+				</label>
+
+				<button type="submit">Join conference</button>
+			</form>
+		</section>
+
+		<main >
+			<video class="video_display" src="" autoplay></video>
+		</main>
+
+		<footer hidden>
+			<section class="section_chat">
+				<article class="chat_display"></article>
+				<form class="chat_form">
+					<input type="text" name="chat-input" id="chat_input" />
+					<button type="submit">Send message</button>
+				</form>
+			</section>
+		</footer>
+
+	</body>
+</html>
