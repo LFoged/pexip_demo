@@ -64,6 +64,7 @@ export const setVideoSrc = (videoURL) => {
     } else {
         DOM.video.src = videoURL;
     }
+    // display chat section
     DOM.footer.hidden = false;
 };
 

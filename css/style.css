@@ -13,8 +13,8 @@ html {
 
 /* VARIABLES */
 :root {
-  --grey-1: rgb(53, 53, 53);
-  --grey-2: rgb(70, 70, 70);
+  --grey-1: rgb(63, 63, 63);
+  --grey-2: rgb(82, 82, 82);
   --grey-3: rgb(0, 0, 0, 0.5);
   --green-1: rgb(20, 158, 38);
   --white-1: rgb(255, 255, 255);
@@ -39,10 +39,18 @@ body {
 header {
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: inherit;
   height: 5rem;
   border: none;
   z-index: 5;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  padding: 3rem 25%;
 }
 
 p,
@@ -91,7 +99,6 @@ button {
   height: 100vh;
   width: 100vw;
   z-index: 3;
-  border: 0.1rem solid var(--grey-1);
 }
 
 .modal_form {
@@ -125,23 +132,22 @@ button {
   background-color: var(--orange-1);
 }
 
-.chat_msg {
-  color: red;
+.chat_form {
+  display: flex;
 }
 
-.section_chat {
-  position: fixed;
+.chat_display {
+  color: var(--white-1);
+  font-size: 1.5;
+  font-weight: 100;
+  background-color: var(--grey-2);
+  margin-bottom: 0.2rem;
+  max-height: 10rem;
+  overflow-y: scroll;
+  border-radius: 0.5rem;
 }
 
-main {
-  border: 1rem solid yellow;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 13rem;
-  width: 100vw;
-  border: 1rem dotted green;
+.chat_display,
+#chat_input {
+  padding: 0.75rem 1rem;
 }
